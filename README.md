@@ -1,11 +1,18 @@
 # CS 631 Course Project
+
 ### University of Waterloo W2021
 
 #### Overview
 
 The goal of this project is to analyze user sentiments towards a number of products and companies using both historical and real time tweets. The data will be streamed using Kafka, analyzed using NLP/Deep Learning methods, stored in Elasticsearch, and then analyzed in a Kibana dashboard.
+<<<<<<< HEAD
 
 #### Learning Outomces
+=======
+
+#### Learning Outomces
+
+>>>>>>> dd7c05185511ed4668b82d79d59afccb6c5daf93
 - General Kafka architecture - topics, producers, consumers
 - Applying natural language processing and deep learning to perform sentiment analysis of text data
 - Indexing and retrieving data in Elasticsearch
