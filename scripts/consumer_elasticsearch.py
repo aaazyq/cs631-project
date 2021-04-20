@@ -3,20 +3,12 @@ from kafka import KafkaConsumer
 from elasticsearch import Elasticsearch
 from json import loads
 from uuid import uuid4
-<<<<<<< HEAD
-
-# arguments
-source_topic_name = 'analyzed_tweets_106'
-consumer_group_id = 'elasticsearch_consumers'
-index_name = 'tweets_106'
-=======
 from helper import process_time
 
 # arguments
 source_topic_name = 'analyzed_tweets_113'
 consumer_group_id = 'elasticsearch_consumers'
 index_name = 'sentiment_analysis_113'
->>>>>>> 40cf69c1a9bab997f68befb8633389a4ceef72b3
 
 # init consumer
 consumer = KafkaConsumer(
@@ -57,22 +49,7 @@ for message in consumer:
 
      print("===============")
      print(message)
-<<<<<<< HEAD
-
-     # for elasticsearch to pick-up timestamps, have to specify a _timestamp field
-     # not sure if it looks for _ prefix for metadata of the document or
-     # the field name has to contain a "timestamp" substring.
-     #message["date"] = message["created_at"]
-     message["_timestamp"] = message["created_at"]
 
      # write onto elasticsearch index
      id = str(uuid4())
      res = es.index(index=index_name, id=id, body=message)
-
-
-=======
-
-     # write onto elasticsearch index
-     id = str(uuid4())
-     res = es.index(index=index_name, id=id, body=message)
->>>>>>> 40cf69c1a9bab997f68befb8633389a4ceef72b3

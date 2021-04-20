@@ -9,11 +9,7 @@ from kafka import KafkaProducer
 from helper import process_time, convert_dict_to_string, get_products_to_track
 
 # arguments
-<<<<<<< HEAD
-topic_name = 'raw_tweets_106'
-=======
 topic_name = 'raw_tweets_113'
->>>>>>> 40cf69c1a9bab997f68befb8633389a4ceef72b3
 
 # get keywords
 keywords_to_track = get_products_to_track()
@@ -74,9 +70,8 @@ class MyStreamListener(tweepy.StreamListener):
 
         # snippet from official documentation
         if status_code == 420:
-            print("Error 420. Trying to reconnect.")
             #returning False in on_error disconnects the stream
-            return True
+            return False
 
         # returning non-False reconnects the stream, with backoff.
         
