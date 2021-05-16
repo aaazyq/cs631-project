@@ -1,5 +1,7 @@
 # CS 631 Course Project
 
+Youtube video: https://www.youtube.com/watch?v=VKS4hhk92So&t=127s 
+
 ### University of Waterloo W2021
 
 #### Overview
